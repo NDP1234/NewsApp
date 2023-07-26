@@ -110,9 +110,11 @@ export default class News extends Component {
             </div> 
         </div>
         <div className="container d-flex justify-content-between my-5">
-            
+
             <button type="button" disabled={this.state.page<=1} onClick={this.getPreviousPage} class="btn btn-dark">&laquo; Previous</button>
             <button type="button" disabled={(this.state.page + 1)>Math.ceil(this.state.totalResults/this.props.pageSize )}  onClick={this.getNextPage} class="btn btn-dark">Next &raquo;</button>
+
+            
         </div>
         </>
         
