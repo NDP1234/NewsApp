@@ -31,7 +31,7 @@ const News = (props) => {
         // console.log(parsedData)
         setarticles(parsedData.articles)
         setTotalResults(parsedData.totalResults)
-        setloading(false)
+        setloading(parsedData.articles.length === parsedData.totalResults ? false : true);
         props.setprogress(100); 
     }
     // async componentDidMount(){
@@ -76,7 +76,7 @@ const News = (props) => {
    
     return (
         <>
-        <h1 className="text-center" style={{ margin: '35px 0px' }}>NewsMonkey - top {capitalizeFirstLetter(props.category)} Headlines</h1>
+        <h1 className="text-center" style={{ margin: '65px 0px' }}>NewsMonkey - top {capitalizeFirstLetter(props.category)} Headlines</h1>
             {/* {this.state.loading && <Spinner/>} */}
 
             <InfiniteScroll
