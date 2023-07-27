@@ -7,10 +7,12 @@ import LoadingBar from 'react-top-loading-bar'
 
 
 class App extends Component {
+  apiKey = process.env.REACT_APP_NEWS_API;
+
   state={
     progress : 0
   }
-apiKey = process.env.REACT_APP_NEWS_API;
+
 
   setProgress =(progress) => {
     this.setState({
@@ -19,6 +21,7 @@ apiKey = process.env.REACT_APP_NEWS_API;
   }
   render() {
     return (
+     
       <div>
         <Router>
           <NavBar />
